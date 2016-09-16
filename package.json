@@ -1,0 +1,23 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "learning react",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "*",
+    "express": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u001b[D\u001b[C\u001b[C\u001b[D"
+  },
+  "keywords": [
+    "react",
+    "learning"
+  ],
+  "author": "Dheeraj Mehta",
+  "license": "ISC"
+}
