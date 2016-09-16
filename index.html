@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>Learning ReactJs</title>
+        <title>Learning ReactJs Properties and validators</title>
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="js/react-15.3.1/build/react.js"></script>
         <script src="js/react-15.3.1/build/react-dom.js"></script>
@@ -12,68 +12,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
-                    <h1 class="page-header">Register</h1>
-                    <div id="registrationForm">
-
-                    </div>
+                    
                 </div>
             </div>
         </div>
 
         <script type="text/babel">
-            var AlertBox = React.createClass({
-                render: function(){
-                    return (
-                        <div className={"alert alert-"+this.props.type}>{this.props.children}</div>
-                    );
-                }
-            });
-            var RegistrationForm = React.createClass({
-                getInitialState: function(){
-                    return {
-                        showAlert: false
-                    }
-                },
-                register: function(event){
-                    event.preventDefault();
-                    var firstName = this.refs.firstName.value.trim();
-                    var lastName = this.refs.lastName.value.trim();
-                    var email = this.refs.email.value.trim();
-
-                    if(!firstName || !lastName || !email){
-                        this.setState({showAlert: true});
-                        return;
-                    }
-                    this.setState({showAlert: false});
-                },
-                render: function(){
-                    return (
-                        <div>
-                            <form onSubmit={this.register}>
-                                {this.state.showAlert ? <AlertBox type='danger'>Please fill in all the fields</AlertBox> : ''}
-                                <div className='form-group'>
-                                    <label htmlFor='firstName'>First Name: </label>
-                                    <input type='text' className='form-control' placeholder='First Name' ref='firstName' />
-                                </div>
-                                <div className='form-group'>
-                                    <label htmlFor='lastName'>Last Name: </label>
-                                    <input type='text' className='form-control' placeholder='Last Name' ref='lastName' />
-                                </div>
-                                <div className='form-group'>
-                                    <label htmlFor='email'>Email: </label>
-                                    <input type='email' className='form-control' placeholder='Email' ref='email' />
-                                </div>
-                                <input className='btn btn-primary' type='submit' value='Submit' />
-                            </form>
-                        </div>
-                    )
-                }
-            });
-
-            ReactDOM.render(
-            <RegistrationForm />,
-            document.getElementById('registrationForm')
-            );
+            
         </script>
     </body>
 </html>
